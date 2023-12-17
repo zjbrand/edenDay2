@@ -18,7 +18,7 @@ public class IfElse {
 		
 		if(a==1 && b==2) {//false
 			System.out.println("两个条件都满足");
-		}else if(a==1 || b==2) {//"||"表示“或”
+		}else if(a==1 || b==2) {//"||"表示“”
 			System.out.println("满足一个条件");
 		}
 
