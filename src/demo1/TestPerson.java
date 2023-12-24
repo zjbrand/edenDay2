@@ -12,8 +12,9 @@ public class TestPerson {
 		
 		//zhang3.eat();
       	zhang3.eat();
-		Person.say();
+		//Person.say();
 		System.out.println("aaa的值："+zhang3.eat());
+		
 
 	}
 	

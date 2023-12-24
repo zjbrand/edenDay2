@@ -14,8 +14,8 @@ public class Person {
 		System.out.println("person eat");
 		return 11;
 	};
-	
-	public static void say() {
+	//静态方法
+	public void say() {
 		System.out.println("person say");
 	}	
 	
