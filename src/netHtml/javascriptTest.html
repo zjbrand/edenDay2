@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>这时我的HTML</title>
+
+<script>
+	function changeImage(){
+		Element=document.getElementById("myimage")
+		if(Element.src.match("bulbon")){
+			Element.src="img/pic_bulboff.gif";
+		}else{
+			Element.src="img/pic_bulbon.gif";
+		}
+	}
+	
+</script>
+
+</head>
+<body>
+<h1>我要做一个灯泡点灭效果</h1>
+<h2>点击鼠标就会点灭</h2>
+<img id="myimage" onclick="changeImage()" 
+src="C:\pleiades2023\2023-12\workspace202312\edenDay2\src\netHtml\img\pic_bulboff.gif"  width="100px" height="180px">
+</body>
+</html>
