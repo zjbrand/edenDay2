@@ -11,8 +11,9 @@ public class Testduotai {
 		System.out.println("---------------");
 		
 		Object[] arrObj= {new Person(),new Japanese(),new English(),new French()};
-		for(int i=0;i<arrObj.length;i++) {
-			Object obj=arrObj[i];
+		//for(int i=0;i<arrObj.length;i++) {
+		for(Object obj:arrObj) {
+			//Object obj=arrObj[i];
 			if(obj instanceof Japanese) {
 				Japanese objPerson=(Japanese)obj;
 				objPerson.say();
