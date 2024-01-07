@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.staticfile.org/vue/2.7.0/vue.min.js"></script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="app">
+		
+		<p v-if="fff">现在看到我了</p>
+		<template v-if="tp">
+		<h1 v-if="ok">Vue可以对网页框架进行操作</h1>
+		<h2>坚持到底</h2>
+		<h3 v-if="ok">不要放弃</h3>
+		</template>
+	</div>
+<script>
+	new Vue({
+		el:'#app',
+		data: {
+			fff: true,
+			ok:false,
+			tp:true,
+		}
+	})
+</script>
+
+</body>
+</html>
