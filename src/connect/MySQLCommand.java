@@ -1,5 +1,6 @@
 package connect;
 
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -10,24 +11,24 @@ public class MySQLCommand {
 
 	public static void main(String[] args) throws SQLException {
 		
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/springlearning?serverTimezone=UTC","root", "5312448th");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mytest?serverTimezone=UTC","root", "5312448th");
+		
 		Statement stmt=con.createStatement();
-		//增加记录：
-		//String s="INSERT INTO account VALUES (6, 'fff', '5000')";
-		//修改记录：
-		//String s="update account set money=2300 where name='bbb'";
-		//删除记录：
-		//String s="delete from account where id=6";
-		//查询记录：
-		String s="select * from account";
-		ResultSet rs= stmt.executeQuery(s);
-		while(rs.next()) {
-			int eid=rs.getInt("id");
-			String fname=rs.getString("name");
-			float fmoney=rs.getFloat("money");
-			System.out.println(eid+"  "+fname+"   "+fmoney);
-		}
+		
+		String s ="select * from employees";
+		//String s="delete from employees where employee_id=3";
+		//String s="update employees set salary=60000 where employee_id=5";
+		ResultSet rs=stmt.executeQuery(s);
+		//String s="INSERT INTO employees VALUES (4, 'Jon Doen', 'Sales', 65000)";
 		//stmt.execute(s);
+		 
+		while(rs.next()) {
+			int eid=rs.getInt("employee_id");
+			String fname=rs.getString("employee_name");
+			String fdepartment=rs.getString("department");
+			int esalary=rs.getInt("salary");
+			System.out.println(eid+" "+fname+" "+fdepartment+" "+esalary);
+		}
 		con.close();
 	}
 
