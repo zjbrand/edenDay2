@@ -4,6 +4,7 @@ public class Testduotai {
 
 	public static void main(String[] args) {
 		
+				
 		Person[] arr= {new Person(),new Japanese(),new English(),new French()};
 		for(int i=0;i<arr.length;i++) {
 			arr[i].say();
@@ -20,6 +21,7 @@ public class Testduotai {
 			}else if(obj instanceof Person) {
 				Person objPerson=(Person)obj;
 				objPerson.say();
+				System.out.println(objPerson.currentTime);
 			}else if(obj instanceof English) {
 				Person objPerson=(English)obj;
 				objPerson.say();
